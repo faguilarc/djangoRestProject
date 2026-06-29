@@ -1,0 +1,38 @@
+# Django & DRF
+Django>=5.0,<6.0
+djangorestframework>=3.14.0
+djangorestframework-simplejwt>=5.3.0
+
+# Environment & Config
+python-decouple>=3.8
+python-dotenv>=1.0.0
+
+# Security & Cryptography
+cryptography>=41.0.0
+
+# CORS
+django-cors-headers>=4.0.0
+
+# Database
+psycopg2-binary>=2.9.0  # PostgreSQL adapter
+
+# Async Tasks
+celery>=5.3.0
+redis>=4.5.0
+
+# Payment Processing
+stripe>=5.0.0
+
+# Documentation
+drf-spectacular>=0.27.0  # OpenAPI/Swagger docs
+
+# Development
+pytest-django>=4.5.0
+pytest-cov>=4.0.0
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0
+
+# Production Server
+gunicorn>=21.0.0
+uvicorn>=0.23.0  # ASGI server
