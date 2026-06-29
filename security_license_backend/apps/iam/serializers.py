@@ -31,5 +31,5 @@ class AuditLogSerializer(serializers.ModelSerializer):
     user_email = serializers.EmailField(source='user.email', read_only=True)
     class Meta:
         model = AuditLog
-        fields = ['id', 'user', 'user_email', 'action', 'resource_type', 'resource_id', 'details', 'timestamp']
-        read_only_fields = ['user', 'timestamp']
+        fields = ['id', 'user', 'user_email', 'action', 'resource_type', 'resource_id', 'details', 'created_at']
+        read_only_fields = ['user', 'created_at']
