@@ -1,8 +1,11 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from apps.core.models import TimeStampedModel, UUIDModel
 from apps.iam.models import User
 from apps.crm.models import Company
+
+User = get_user_model()
 
 
 class SigningKey(UUIDModel, TimeStampedModel):
@@ -288,13 +291,10 @@ class Document(UUIDModel, TimeStampedModel):
     )
 
     user = models.ForeignKey(
-        User,
+        User, # Esto apunta a tu modelo User en 'iam'
         on_delete=models.CASCADE,
         related_name='documents',
-        verbose_name=_('user'),
-        help_text=_('Usuario propietario del documento a firmar.'),
-        null=True,
-        blank=True
+        help_text="Usuario propietario del documento a firmar."
     )
 
     class Meta:
@@ -310,4 +310,4 @@ class Document(UUIDModel, TimeStampedModel):
         unique_together = ('user', 'title')
 
     def __str__(self):
-        return f"{self.title} ({self.status})"
+        return f"{self.title} - {self.user.email}"
