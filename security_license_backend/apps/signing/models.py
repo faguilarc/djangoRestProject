@@ -287,6 +287,16 @@ class Document(UUIDModel, TimeStampedModel):
         help_text=_('Additional metadata in JSON format.')
     )
 
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='documents',
+        verbose_name=_('user'),
+        help_text=_('Usuario propietario del documento a firmar.'),
+        null=True,
+        blank=True
+    )
+
     class Meta:
         verbose_name = _('document')
         verbose_name_plural = _('documents')
@@ -297,6 +307,7 @@ class Document(UUIDModel, TimeStampedModel):
             models.Index(fields=['file_hash']),
             models.Index(fields=['status', '-created_at']),
         ]
+        unique_together = ('user', 'title')
 
     def __str__(self):
         return f"{self.title} ({self.status})"
