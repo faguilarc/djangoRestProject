@@ -23,8 +23,8 @@ class LicenseSerializer(serializers.ModelSerializer):
 class LicenseActivationSerializer(serializers.ModelSerializer):
     class Meta:
         model = LicenseActivation
-        fields = ['id', 'license', 'machine_id', 'activated_at', 'last_seen', 'is_active']
-        read_only_fields = ['activated_at', 'last_seen']
+        fields = ['id', 'license', 'machine_id', 'activated_at', 'last_seen_at', 'is_active']
+        read_only_fields = ['activated_at', 'last_seen_at']
 
 
 class LicenseUsageSerializer(serializers.ModelSerializer):
