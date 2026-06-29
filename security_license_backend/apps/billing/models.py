@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from apps.core.models import TimeStampedModel, UUIDModel
-from apps.iam.models import User
-from apps.crm.models import Company
+
+from security_license_backend.apps.core.models import UUIDModel, TimeStampedModel
+from security_license_backend.apps.crm.models import Company
 
 
 class PaymentMethod(UUIDModel, TimeStampedModel):
