@@ -1,51 +1,52 @@
-# Compiled and build artifacts
-*.pyc
+```
+# Python
 __pycache__/
-*.o
-*.obj
-*.class
-*.so
-*.dll
-*.exe
-*.out
-
-# Dependencies
-.venv/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
 venv/
-.env
-.env.local
-.env.*
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-
-# Editors
-.vscode/
-.idea/
-
-# Coverage
+.venv/
+.ENV
+.venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
 .coverage
-coverage/
-htmlcov/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+.MF
+.project
+.pydevproject
+.vscode/
 
-# Distribution / packaging
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+.env
+.DS_Store
+Thumbs.db
+
+# Build and distribution artifacts
 dist/
 build/
 *.egg-info/
-
-# Python specific
-*.pyo
-*~
-.Python
-*.sqlite3
-
-# MyPy cache
-.mypy_cache/
-# Pytest cache
+.sass-cache/
+coverage/
+htmlcov/
 .pytest_cache/
-
-# OS generated files
-.DS_Store
-Thumbs.db
+.mypy_cache/
+```
