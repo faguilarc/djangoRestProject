@@ -35,6 +35,6 @@ class MenuViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 class AuditLogViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = AuditLog.objects.all().order_by('-timestamp')
+    queryset = AuditLog.objects.all().order_by('-created_at')
     serializer_class = AuditLogSerializer
     permission_classes = [permissions.IsAdminUser] # Solo admins ven logs

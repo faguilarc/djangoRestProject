@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from apps.iam.views import UserViewSet, RoleViewSet, MenuViewSet, AuditLogViewSet
-from crm.views import CompanyViewSet, ContactViewSet, InteractionViewSet
-from licensing.views import PlanViewSet, LicenseViewSet, LicenseActivationViewSet, LicenseUsageViewSet
-from signing.views import SigningKeyViewSet, DocumentViewSet, SignatureViewSet
-from billing.views import PaymentMethodViewSet, InvoiceViewSet, SubscriptionViewSet, PaymentViewSet
+from app.crm.views import CompanyViewSet, ContactViewSet, InteractionViewSet
+from app.licensing.views import PlanViewSet, LicenseViewSet, LicenseActivationViewSet, LicenseUsageViewSet
+from app.signing.views import SigningKeyViewSet, DocumentViewSet, SignatureViewSet
+from app.billing.views import PaymentMethodViewSet, InvoiceViewSet, SubscriptionViewSet, PaymentViewSet
 
 router = DefaultRouter()
 
