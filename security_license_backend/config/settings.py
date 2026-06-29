@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'drf_spectacular',
     # Local apps
-    'apps.core',
+    # 'apps.core',
     'apps.iam',
     'apps.crm',
     'apps.licensing',
