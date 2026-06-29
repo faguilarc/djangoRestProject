@@ -246,6 +246,12 @@ class LicenseActivation(UUIDModel, TimeStampedModel):
         default=True,
         help_text=_('Indicates if this activation is currently active.')
     )
+    activated_at = models.DateTimeField(
+        _('activated at'),
+        null=True,
+        blank=True,
+        help_text=_('Date and time when this specific activation was performed.')
+    )
     deactivated_at = models.DateTimeField(
         _('deactivated at'),
         null=True,
